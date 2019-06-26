@@ -1,0 +1,28 @@
+{
+  "name": "gen",
+  "version": "1.0.0",
+  "description": "代码生成器",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx babel-node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragon8github/gen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragon8github/gen/issues"
+  },
+  "homepage": "https://github.com/dragon8github/gen#readme",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "devDependencies": {
+    "fast-glob": "^2.2.7"
+  }
+}
