@@ -6,8 +6,8 @@ import { request } from '@/utils/request'
  */
 export function getUserList (params) {
   return request({
-    url: '{{url}}',
-    method: '{{type}}',
+    url: '<%= url %>',
+    method: '<%= type %>',
     params
   })
 }

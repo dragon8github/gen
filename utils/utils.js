@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import art from 'art-template'
+import ejs from 'ejs'
+import mkdirp from 'mkdirp'
 
 /**
  * 获取兼容性的路径 ...
@@ -18,4 +19,10 @@ export const write = (content, path) => fs.writeFileSync(getPath(path), content)
  * 模板引擎渲染 ...
  *
  */
-export const render = (tmpPath, data) => art(getPath(tmpPath), data)
+export const render = (tmpPath, data) => ejs.renderFile(getPath(tmpPath), data, { async: true })
+
+/**
+ * 创建文件夹 ...
+ *
+ */
+export const mkdir = path => mkdirp.sync(getPath(path))
