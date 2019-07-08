@@ -9,7 +9,7 @@
                     <el-col :xs="24" :sm="8">
                         <el-form-item label="<%= form[i].name%>：">
                             <el-date-picker
-                               v-model="<%= timeField %>"
+                               v-model="params.<%= timeField %>"
                                format="yyyy-MM-dd"
                                value-format="yyyy-MM-dd"
                                type="daterange"
@@ -123,6 +123,10 @@ export default {
         },
         resetSearchParams() {
             let resetParams = {
+                // 当前页码
+                page: 1,
+                // 分页数
+                size: 20,
             	<% for(var i = 0; i < form.length; i++){ %>
                 <% if (form[i].type === 'time') { %>
                 <% const [starttime, endtime] = form[i].field.split('|') %>
