@@ -126,6 +126,8 @@ export default {
                 <% if (form[i].type === 'time') { %>
                 <% const [starttime, endtime] = form[i].field.split('|') %>
                 <% const [_, timeName] = starttime.split('_') %>
+                // <%= form[i].name %>
+                <%= timeName %>: '',
                 // <%= form[i].name %>-开始时间
                 <%= starttime %>: '',
                 // <%= form[i].name %>-结束时间
