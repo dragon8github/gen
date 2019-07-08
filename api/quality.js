@@ -1,6 +1,5 @@
 module.exports = function ({ config }) {
 	return Object.assign({}, config, {
-		module: 'quality',
 		url: '/api/dl/quality/dlQualityInfo/search',
 		type: 'post',
 		form: [
